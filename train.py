@@ -72,7 +72,6 @@ def rank_eval(pred, true_labels, sl):
             mrr += (1./rank)/float(length)
     return mrr, ac1, ac5, ac10, ac50, ac100
 
-
 def args_setting(config):
     parser = argparse.ArgumentParser()
     parser.add_argument("-l", "--lr", type=float, help="learning rate")
@@ -118,13 +117,7 @@ def train(argv):
     train_size = train_data[2]
     valid_size = valid_data[2]
     test_size = test_data[2]
-
     print (train_size, valid_size, test_size)
-
-    train_num = train_data[3]
-    valid_num = valid_data[3]
-    test_num = test_data[3]
-
     A = read_graph(data_name + '-graph', node_to_id)
     input_train = Input(config, train_data)
     input_valid = Input(config, valid_data)
@@ -141,12 +134,9 @@ def train(argv):
     # Parameter Initialization
     sess.run(tf.global_variables_initializer())
 
-
-
+    # Record test results at best validation epoch with early stopping
     max_logits = float('inf')
     stop_count = 0
-
-    # Record test results at best validation epoch
     best_mrr = 0
     best_ac1 = 0
     best_ac5 = 0
@@ -158,7 +148,6 @@ def train(argv):
     # Print Training information
     train_info = "Data: {0}, Model: {1}, GPU Num: {2}, Learning Rate: {3:.3f}, Embedding Size: {4}, Hidden Size: {5}, Batch Size: {6}"
     print(train_info.format(config.data_name, config.model, config.gpu_no, config.learning_rate, config.embedding_dim, config.hidden_dim, config.batch_size))
-
     print('Start training...')
 
     # Training Process
@@ -172,7 +161,6 @@ def train(argv):
         valid_ac10 = 0
         valid_ac50 = 0
         valid_ac100 = 0
-
         test_mrr = 0
         test_ac1 = 0
         test_ac5 = 0
@@ -186,14 +174,10 @@ def train(argv):
             feed_dict = {model._inputs: x_batch, model._targets: y_batch, model._seqlen: seq_length, model.batch_size: batch_size, model.num_steps: num_steps}
             _, batch_cost = sess.run([model.optim, model.nll], feed_dict=feed_dict)
             epoch_logits += np.sum(batch_cost)
-
         msg = "Train NLL: {0:>6.3f}"
         print(msg.format(epoch_logits/float(train_size)))
 
         if (epoch+1)%config.valid_freq == 0:
-
-            # msg = "Validating and testing at Epoch {0}/{1}......"
-            # print(msg.format(epoch + 1, num_epochs))
             msg = 'Epoch ' + str(epoch+1) + '/' + str(num_epochs) + ' (Val.)'
             for j in tqdm(range(input_valid.batch_num), desc=msg):
                 x_batch, y_batch, seq_length, batch_size, num_steps = input_valid.next_batch()
@@ -255,8 +239,6 @@ def train(argv):
     msg = "Test MRR: {0:>6.5f}, ACC1: {1:>6.5f}, ACC5: {2:>6.5f}, ACC10: {3:>6.5f}, ACC50: {4:>6.5f}, ACC100: {5:>6.5f}"
     print(msg.format(best_mrr/float(test_size), best_ac1/float(test_size), best_ac5/float(test_size), best_ac10/float(test_size), best_ac50/float(test_size), best_ac100/float(test_size) ))
 
-
-
     # Save results of best validation model
     with open('results.txt', 'a') as f:
         f.write('Test results on ' + data_name + ':\n')
@@ -268,7 +250,6 @@ def train(argv):
         f.write('ACC100: '+ str(best_ac100/float(test_size)) + '\n\n')
 
     sess.close()
-
 
 if __name__ == '__main__':
     train(sys.argv)
