@@ -35,9 +35,11 @@ Check the arguments as:
 
 ## Data Format
 ### Cascades:
-    u1,u2,u3,...,ul:t1,t2,t3,...,tl
+>u1_id,u2_id,...,ul_id      
 ### Graph:
-    u1 u2 weights(optional, we do not use weights)
+>u1_id u2_id <weight, optional>     
+>1 2 1.0        
+>......
 ## Citing
     @inproceedings{Wang:2018:SNI:3269206.3269275,
     author = {Wang, Zhitao and Chen, Chengyao and LI, Wenjie},
