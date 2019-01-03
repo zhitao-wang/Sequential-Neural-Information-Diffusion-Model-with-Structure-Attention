@@ -3,7 +3,6 @@
 from collections import Counter
 import os
 import numpy as np
-import scipy.sparse as sp
 
 def _read_nodes(filename):
     data = []
@@ -28,27 +27,6 @@ def read_graph(filename, node_to_id):
                 # else:
                 A[source_id,target_id] = 1.0
     return A
-
-# def read_graph_sparse(filename, node_to_id):
-#     N = len(node_to_id)
-#     data = []
-#     row = []
-#     col = []
-#     with open(filename, 'r') as f:
-#         for line in f:
-#             edge = line.strip().split()
-#             if edge[0] in node_to_id and edge[1] in node_to_id:
-#                 row.append(node_to_id[edge[0]])
-#                 col.append(node_to_id[edge[1]])
-#                 data.append(1.0)
-#     row = np.array(row)
-#     col = np.array(col)
-#     data = np.array(data)
-#     A = sp.csr_matrix((data, (row, col)), shape=(N, N))
-#     return A
-
-# def sparse_neighbors_generate(x_batch): # x_batch is a (batch_size, seq_length) matrix
-#     return A[x_batch]
 
 def _build_vocab(filename):
     data = _read_nodes(filename)
