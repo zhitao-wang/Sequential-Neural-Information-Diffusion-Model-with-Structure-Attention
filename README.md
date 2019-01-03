@@ -14,18 +14,20 @@ The code is implemented with Tensorflow. Requirments:
 &emsp;4. tqdm (for training process display)   
 
 ## Run
-Defalut:
-    python train.py
-optional arguments:
-  -h, --help            show this help message and exit  
-  -l LR, --lr LR        learning rate  
-  -x XDIM, --xdim XDIM  embedding dimension  
-  -e HDIM, --hdim HDIM  hidden dimension  
-  -d DATA, --data DATA  data name  
-  -g GPU, --gpu GPU     gpu id  
-  -b BS, --bs BS        batch size  
-  -f FREQ, --freq FREQ  validation frequency  
-  -n NEPOCH, --nepoch NEPOCH number of training epochs
+Defalut:  
+
+    python train.py  
+    
+Optional arguments:
+&emsp;-h, --help (show this help message and exit)  
+&emsp;-l, --lr (learning rate)  
+&emsp;-x, --xdim (embedding dimension)  
+&emsp;-e, --hdim (hidden dimension)  
+&emsp;-d, --data (data path)  
+&emsp;-g, --gpu (gpu id)  
+&emsp;-b, --bs (batch size)  
+&emsp;-f, --freq (validation frequency)  
+&emsp;-n, --nepoch (number of training epochs)
 
 ## Citing
     @inproceedings{Wang:2018:SNI:3269206.3269275,
