@@ -7,12 +7,25 @@ This repository provides reference codes as described in the paper:
 >**CIKM, 2018.** 
 
 ## Environment
-The code is implemented with Tensorflow.  
-Requirments:  
+The code is implemented with Tensorflow. Requirments:  
 &emsp;1. Python 2.7  
 &emsp;2. Numpy  
 &emsp;3. Tensorflow  
-&emsp;4. tqdm (for training process display)    
+&emsp;4. tqdm (for training process display)   
+
+## Run
+Defalut:
+    python train.py
+optional arguments:
+  -h, --help            show this help message and exit  
+  -l LR, --lr LR        learning rate  
+  -x XDIM, --xdim XDIM  embedding dimension  
+  -e HDIM, --hdim HDIM  hidden dimension  
+  -d DATA, --data DATA  data name  
+  -g GPU, --gpu GPU     gpu id  
+  -b BS, --bs BS        batch size  
+  -f FREQ, --freq FREQ  validation frequency  
+  -n NEPOCH, --nepoch NEPOCH number of training epochs
 
 ## Citing
     @inproceedings{Wang:2018:SNI:3269206.3269275,
