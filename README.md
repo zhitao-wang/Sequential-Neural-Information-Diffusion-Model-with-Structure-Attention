@@ -7,7 +7,12 @@ This repository provides reference codes as described in the paper:
 >**CIKM, 2018.** 
 
 ## Environment
-&emsp; The code is implemented with Tensorflow
+&emsp; The code is implemented with Tensorflow.
+&emsp; Requirments:
+&emsp; 1. Python 2.7;
+&emsp; 2. Numpy;
+&emsp; 3. Tensorflow;
+&emsp; 4. tqdm (for training process display)
 
 ## Citing
     @inproceedings{Wang:2018:SNI:3269206.3269275,
