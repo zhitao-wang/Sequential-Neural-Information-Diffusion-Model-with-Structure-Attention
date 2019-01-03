@@ -8,9 +8,9 @@ This repository provides reference codes as described in the paper:
 
 ## Environment
 The code is implemented with Tensorflow. Requirments:
-&emsp;1. Python 2.7 
+&emsp;1. Python 2.7  
 &emsp;2. Numpy  
-&emsp;3. Tensorflow 
+&emsp;3. Tensorflow  
 &emsp;4. tqdm (for training process display)    
 
 ## Citing
