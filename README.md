@@ -21,7 +21,7 @@ Defalut:
 Or run with optional arguments:  
 
     python train.py -d data/hc-exp -l 0.001 -x 32 -e 64 -b 32 -n 200 -f 5
-Chech the arguments as:  
+Check the arguments as:  
 
     python train.py -h
     -l, --lr (learning rate)  
@@ -33,6 +33,11 @@ Chech the arguments as:
     -f, --freq (validation frequency)  
     -n, --nepoch (number of training epochs)
 
+## Data Format
+### Cascades:
+    u1,u2,u3,...,ul:t1,t2,t3,...,tl
+### Graph:
+    u1 u2 weights(optional, we do not use weights)
 ## Citing
     @inproceedings{Wang:2018:SNI:3269206.3269275,
     author = {Wang, Zhitao and Chen, Chengyao and LI, Wenjie},
@@ -43,6 +48,7 @@ Chech the arguments as:
     location = {Torino, Italy},
     pages = {1795--1798}
     } 
+
 
 
   
