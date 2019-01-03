@@ -35,11 +35,12 @@ Check the arguments as:
 
 ## Data Format
 ### Cascades:
->u1_id,u2_id,...,ul_id      
+>u1_id,u2_id,...,ul_id:u1_time,u2_time,...,ul_time
+>Example: 334,478,398,222:75.117015,77.968750,78.757250,80.020426
+
 ### Graph:
 >u1_id u2_id <weight, optional>     
->1 2 1.0        
->......
+>Example: 0 132 0.010008        
 ## Citing
     @inproceedings{Wang:2018:SNI:3269206.3269275,
     author = {Wang, Zhitao and Chen, Chengyao and LI, Wenjie},
