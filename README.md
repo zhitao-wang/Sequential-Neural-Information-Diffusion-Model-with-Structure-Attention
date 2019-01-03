@@ -36,7 +36,7 @@ Check the arguments as:
 ## Data Format
 ### Cascades:
 >u1_id,u2_id,...,ul_id:u1_time,u2_time,...,ul_time (time is optional, we do not use)     
->Example: 334,478,398,222:75.117015,77.968750,78.757250,80.020426
+>Example: 334,478,398,222:75.117015,77.968750,78.757250,80.020426     
 Or     
 >u1_id,u2_id,...,ul_id     
 >Example: 334,478,398,222     
