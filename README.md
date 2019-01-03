@@ -7,7 +7,8 @@ This repository provides reference codes as described in the paper:
 >**CIKM, 2018.** 
 
 ## Environment
-The code is implemented with Tensorflow. Requirments:
+The code is implemented with Tensorflow.  
+Requirments:  
 &emsp;1. Python 2.7  
 &emsp;2. Numpy  
 &emsp;3. Tensorflow  
