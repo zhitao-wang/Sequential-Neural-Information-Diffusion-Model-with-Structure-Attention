@@ -40,7 +40,10 @@ Check the arguments as:
 
 ### Graph:
 >u1_id u2_id weight (weight is optional, we do not use)     
->Example: 0 132 0.010008        
+>Example: 0 132 0.010008  
+
+## Data Creatation
+You can create graph and generate cascades through the software NETINF (http://snap.stanford.edu/netinf/)
 ## Citing
     @inproceedings{Wang:2018:SNI:3269206.3269275,
     author = {Wang, Zhitao and Chen, Chengyao and LI, Wenjie},
