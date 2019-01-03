@@ -2,8 +2,8 @@
 
 This repository provides reference codes as described in the paper:
 
->**A Sequential Neural Information Diffusion Model with Structure Attention.**
->**Zhitao Wang, Chengyao Chen and Wenjie Li.**
+>**A Sequential Neural Information Diffusion Model with Structure Attention.**  
+>**Zhitao Wang, Chengyao Chen and Wenjie Li.**  
 >**CIKM, 2018.** 
 
 ## Environment
