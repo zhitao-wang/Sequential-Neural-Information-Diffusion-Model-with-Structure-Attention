@@ -18,16 +18,17 @@ Defalut:
 
     python train.py  
     
-Optional arguments:
-&emsp;-h, --help (show this help message and exit)  
-&emsp;-l, --lr (learning rate)  
-&emsp;-x, --xdim (embedding dimension)  
-&emsp;-e, --hdim (hidden dimension)  
-&emsp;-d, --data (data path)  
-&emsp;-g, --gpu (gpu id)  
-&emsp;-b, --bs (batch size)  
-&emsp;-f, --freq (validation frequency)  
-&emsp;-n, --nepoch (number of training epochs)
+Or run with optional arguments:  
+
+    &emsp;-h, --help (show this help message and exit)  
+    &emsp;-l, --lr (learning rate)  
+    &emsp;-x, --xdim (embedding dimension)  
+    &emsp;-e, --hdim (hidden dimension)  
+    &emsp;-d, --data (data path)  
+    &emsp;-g, --gpu (gpu id)  
+    &emsp;-b, --bs (batch size)  
+    &emsp;-f, --freq (validation frequency)  
+    &emsp;-n, --nepoch (number of training epochs)
 
 ## Citing
     @inproceedings{Wang:2018:SNI:3269206.3269275,
