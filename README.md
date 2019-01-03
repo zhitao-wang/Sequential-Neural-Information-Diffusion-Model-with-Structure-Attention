@@ -37,10 +37,16 @@ Check the arguments as:
 ### Cascades:
 >u1_id,u2_id,...,ul_id:u1_time,u2_time,...,ul_time (time is optional, we do not use)     
 >Example: 334,478,398,222:75.117015,77.968750,78.757250,80.020426
+Or     
+>u1_id,u2_id,...,ul_id     
+>Example: 334,478,398,222     
 
 ### Graph:
 >u1_id u2_id weight (weight is optional, we do not use)     
 >Example: 0 132 0.010008  
+Or     
+>u1_id u2_id     
+>Example: 0 132     
 
 ## Data Creation
 You can create graph and generate cascades through the software NETINF (http://snap.stanford.edu/netinf/)
