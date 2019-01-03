@@ -17,7 +17,7 @@ class Config(object):
     hidden_dim = 64
     num_epochs = 200
     valid_freq = 5
-    patience = 10%valid_freq + 1
+    patience = int(10/valid_freq) + 1
     model = 'snidsa'
     gpu_no = '0'
     data_name = 'data/hc-exp'
@@ -97,7 +97,7 @@ def args_setting(config):
         config.gpu_no = args.gpu
     if args.freq:
         config.valid_freq = args.freq
-        config.patience = 10%config.valid_freq + 1
+        config.patience = int(10/config.valid_freq) + 1
     if args.nepoch:
         config.num_epochs = args.nepoch
     return config
