@@ -71,7 +71,7 @@ def struc_atten(X, feat_in_matrix, A, feat_out):
         combinations = tf.concat([repeated, tiled],1)  # (BN x 2F')
         combination_slices = tf.reshape(combinations, (batch_size, -1, 2 * feat_out))  # (B x N x 2F')
 
-        dense = tf.squeeze(tf.contrib.keras.backend.dot(combination_slices, Wa), -1)  # a(Wh_i, Wh_j) in the paper (B x N x 1)
+        dense = tf.squeeze(tf.contrib.keras.backend.dot(combination_slices, Wa), -1)  
         # 降维成 B X N
         comparison = tf.equal(A, tf.constant(0, dtype=tf.float32))
         mask = tf.where(comparison, tf.ones_like(A) * -10e9, tf.zeros_like(A))
